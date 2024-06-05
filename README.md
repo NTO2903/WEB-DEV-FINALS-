@@ -7,6 +7,7 @@ API USED:
 Currencies - https://github.com/fawazahmed0/exchange-api
 
 Pantry Databse - https://getpantry.cloud/
+API key for pantry ed2d4387-3dbf-41eb-aaa8-42df140945b7
 
 How To Use:
 Sign in into the sign in page and fill up the entries

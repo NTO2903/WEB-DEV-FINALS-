@@ -9,6 +9,13 @@ Currencies - https://github.com/fawazahmed0/exchange-api
 Pantry Databse - https://getpantry.cloud/
 API key for pantry ed2d4387-3dbf-41eb-aaa8-42df140945b7
 
+to set up dependencies
+npm install pantry-node
+npm install ws
+npm install chart.js
+npm install express
+npm install http
+
 How To Use:
 Sign in into the sign in page and fill up the entries
 Reload to return to the first page and log in

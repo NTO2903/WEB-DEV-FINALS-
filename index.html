@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = "stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'Container'>
+
+        
+        <div id = 'FirstFrame'>
+            <button onclick="loginSignup('Sign Up')">Sign Up</button>
+            <button onclick="loginSignup('Log In')">Log In</button>
+        </div>
+
+
+        <div id = 'SigninFrame'>
+            <div class="wrapper">
+        
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Username" id = 'UsernameField'>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-field">
+                        <select id = 'CurrencyField'>
+                            <option value="php">php</option>
+                            <option value="usdt">usdt</option>
+                            <option value="eur">eur</option>
+                            <option value="jpy">jpy</option>
+                            <option value="inr">inr</option>
+
+                        </select>
+                        <i class='bx bx-dollar-circle'></i>
+    
+                    </div>
+                </div>
+                        
+    
+                        <div class="input-box">
+                            <div class="input-field">
+                                <input type="password" placeholder="Password" id = 'PasswordField'> 
+                                <i class='bx bxs-lock-alt' ></i>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" placeholder="Confirm Password" id = 'Password2Field'>
+                                <i class='bx bxs-lock-alt' ></i>
+            
+                            </div>
+                         </div>
+                         <label><input type="checkbox">
+                            I herebey declare that the above information provided is true and correct
+                        </label>
+    
+                        <button type="submit" class="btn" onclick="postData_signup()">Register</button>
+            
+        </div>
+        </div>
+
+        <div id = 'LoginFrame'>
+            <div class="showcase">
+                <div class="video-container">
+                    <video src="Stock Market Background Video.mp4" autoplay muted loop id="myVIDEO"></video>
+                </div>
+            </div>
+            <div class="login-box">
+                <h2>LOGIN</h2>
+             
+                    <div class="user-box">
+                        <input id="UsernameField_Log" type="text" name="" required="">
+                        <div id ="label">Username</div>
+                    </div>
+                    <div class="user-box">
+                        <input id="PasswordField_Log" type="password" name="" required="">
+                        <div id ="label">Password</div>
+                    </div>
+                    <div><button class="button" onclick="fetchData_login()">Login</button><button class="button">Back</button></div>
+               
+            </div>
+        </div>
+
+        <div id = "DashboardFrame">
+            <div id = 'Tabs'><div id = 'Profile'>php</div><div id="Name"></div> <button class='Options' onclick="getCurrencies(document.getElementById('Profile').innerText)">Trade</button> <button class='Options' onclick="getCurrencies()">Currencies</button> </div>
+            <ul id = CurrencyList></ul>
+        </div>
+
+
+        <div id = 'ChartFrame'>
+            <div id = 'ChartContainer' >
+                <canvas id = 'Chart'></canvas>
+            </div>
+            <div id = 'Methods'><button id = 'Trade' onclick="tradeWebsocket()">Trade</button></div>
+            <input id = 'Amount_field' type="number">
+            <div style="color: white;">Enter Amount TO TRADE</div>
+        </div>
+
+        <div id = 'TradingFrame'>
+            
+        </div>
+        <div id = 'NotificationFrame'>
+            <div id = 'NotificationMessage_Message'></div>
+            <div id = 'NotificationMessage_Name'></div>
+            <div id = 'NotificationMessage_Message2'></div>
+            <div id = 'NotificationMessage_Currency'></div>
+            <div id = 'NotificationMessage_Message3'></div>
+            <div id = 'NotificationMessage_Amount'></div>
+            <button id="AcceptRequest" onclick="acceptRequest()">ACCEPT</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

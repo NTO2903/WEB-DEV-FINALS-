@@ -15,6 +15,7 @@ npm install ws
 npm install chart.js
 npm install express
 npm install http
+npm install stack
 
 How To Use:
 Sign in into the sign in page and fill up the entries
